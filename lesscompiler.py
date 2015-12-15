@@ -286,6 +286,9 @@ class Compiler:
         elif os.path.isdir(os.path.join(current[0], 'css')):
           # the parent folder of less has a folder named css, make this the output dir
           output_dir = os.path.join(current[0], 'css')
+        elif os.path.isdir(os.path.join(current[0], 'dist/css')):
+          # the parent folder of less has distribute directory 'dist/css' folder, make this the output dir
+          output_dir = os.path.join(current[0], 'dist/css')
         else:
           # no conditions have been met, compile the file to the same folder as the less file is in
           output_dir = ''
